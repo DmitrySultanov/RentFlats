@@ -1,0 +1,330 @@
+@charset "utf-8";
+@import "mixins.scss";
+@import url(../fonts/clearsans.css);
+@import url(../fonts/clearsans-thin.css);
+@import url(../fonts/clearsans-light.css);
+@import url(../fonts/clearsans-medium.css);
+@import url(../fonts/clearsans-bold.css);
+
+
+body{
+	-webkit-text-size-adjust: none;
+	-webkit-overflow-scrolling: touch;
+	height: auto;
+	min-height: 100%;
+	background: #efefef; 
+	font-family: 'ClearSans';
+}
+
+h1{
+	margin-top: 20px;
+	font-family: 'ClearSans-Light';
+}
+
+.red{
+	color: rgb(204,0,0);
+}
+
+$red: rgb(204,0,0);
+
+.flex{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+
+	&.justi{
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&.justi-important{
+		-webkit-justify-content: space-between!important;
+		justify-content: space-between!important;
+	}
+
+	&.center{
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	&.right{
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+
+	&.align{
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	&.bottom{
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
+	}
+
+	&.nowrap{
+		flex-wrap: nowrap;
+	}
+}
+
+.objects-container{
+	margin-top: 30px;
+}
+.main-gutters {
+  margin-right: -5px;
+  margin-left: -5px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+.search-panel{
+
+	.form-group{
+		margin-bottom: 0;
+
+		&.select--size, &.select--cost{
+			width: 25%;
+		}
+		&.select--size{
+			.multiselect__tags{
+				border-radius: .25rem 0 0 .25rem!important;
+			}
+		}
+
+		&.select--district{
+			width: 40%;
+		}
+	}
+
+	.btn{
+		width: 10%;
+	}
+
+	form{
+		width: 100%;
+		padding: .5rem 0;
+	}
+
+	.form-control{
+		height: 38px;
+	}
+	.btn{
+		height: 38px;
+		border-radius: 0 .25rem .25rem 0;
+	}
+}
+
+.bg-red{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc0000+0,cc0000+100;Red+Flat */
+	background: rgb(204,0,0); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(204,0,0,1) 0%, rgba(204,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(204,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(204,0,0,1) 0%,rgba(204,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc0000',GradientType=0 ); /* IE6-9 */
+}
+
+.dividir{
+	height: 10px;
+}
+
+.flat-expanded{
+
+	img{
+		max-width: 100%;
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+////////////////////////////
+ol, ul, menu{
+	list-style: none;
+}
+p{
+	line-height: 22px;
+}
+.multiselect__tag{
+	margin-bottom: 2px!important;
+}
+.multiselect__tags{
+	font-size: 13px!important;
+	min-height: 38px!important;
+	border-radius: 0!important;
+	padding: 8px 30px 0 5px!important;
+}
+.multiselect__input, .multiselect__single{
+	font-size: 15px;
+}
+
+.multiselect__option{
+	padding: 7px 12px!important;
+    min-height: 32px!important;
+}
+.multiselect__option:after{
+	display: none;
+}
+
+.multiselect__content-wrapper{
+	box-shadow: 0px 2px 5px -1px rgba(0,0,0, .44);
+}
+
+.multiselect__content-wrapper{
+	z-index: 65!important;
+}
+
+.nav-link {
+    padding: .2rem 1rem;
+}
+
+.tooltip{
+	opacity: 1;
+	font-size: 12px;
+	line-height: 16px;
+	margin: 5px;
+}
+.tooltip-inner{
+	max-width: 280px;
+}
+
+.alert{
+	font-size: 15px;
+}
+
+.search-panel{
+	z-index: 24;
+}
+
+.form{
+	label{
+		cursor: pointer;
+	}
+
+	.form-check{
+		margin-top: 5px;
+
+		input[type="radio"]{
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+
+			&:checked + i{
+				border-color: #3d3d3d;
+				@include box-shadow(none);
+
+				&:after{
+					@include transform(scale(1));
+					@include transition(ease-in-out .2s);
+				}
+			}
+		}
+		i{
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			border: 1px solid #999;
+			background: #fff;
+			border-radius: 50%;
+			vertical-align: top;
+		    margin-top: 2px;
+		    margin-right: 4px;
+			position: relative;
+			@include box-shadow(inset 1px 2px 1px rgba(0,0,0, .2));
+			@include transition(ease-in-out .2s);
+
+			&:after{
+				content: '';
+				width: 10px;
+				height: 10px;
+				background: #3d3d3d;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				@include transform(scale(0));
+				@include transition(ease-in-out .2s);
+			}
+		}
+	}
+}
+
+@media (max-width: 991px){
+	.multiselect__tags{
+		white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 768px){
+	h1{
+		font-size: 1.5em;
+	}
+
+	h2{
+		font-size: 1.3em;
+	}
+
+	.search-panel{
+		.form-group{
+    		margin-bottom: 5px;
+
+			&.select--size, &.select--cost, &.select--district{
+				width: 100%;
+
+				.multiselect{
+					min-height: 32px;
+					&__select{
+						height: 34px;
+					}
+
+					.multiselect__input, .multiselect__single{
+						font-size: 14px;
+					}
+				}
+
+				.multiselect__tags{
+					border-radius: .2rem !important;
+					padding: 5px 30px 0 5px !important;
+					min-height: 32px!important;
+					height: 32px;
+				}
+			}
+		}
+
+		.btn{
+			width: 100%;
+			border-radius: .2rem;
+		}
+	}
+
+	.form{
+
+		.form-check{
+			padding-left: 0;
+		}
+	} 
+}
