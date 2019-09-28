@@ -35,19 +35,19 @@
 	<h2>Способы оплаты:</h2>
 	<ul class="payment-list flex">
 		<li>
-			<div class="icon"><icon name="money"></icon></div>
+			<div class="icon"><fa-icon name="money-bill-alt"></fa-icon></div>
 			<p><b class="alert-link alert-danger">наличными</b> в салонах Евросеть и Связной (назвать сотруднику салона платёжный код) или через терминалы Qiwi</p>
 		</li>
 		<li>
-			<div class="icon paar-icon"><icon name="cc-paypal"></icon><icon name="cc-amex"></icon></div>
+			<div class="icon paar-icon">	</div>
 			<p><b class="alert-link alert-danger">электронными деньгами</b>(Qiwi, WebMoney, Яндекс.Деньги, Единый кошелёк и др.)</p>
 		</li>
 		<li>
-			<div class="icon paar-icon"><icon name="cc-visa"></icon><icon name="cc-mastercard"></icon></div>
+			<div class="icon paar-icon"><fa-icon name="credit-card"></fa-icon></div>
 			<p><b class="alert-link alert-danger">банковской картой</b>(именной картой VISA/MasterCard с привязанной  банком сим-картой)</p>
 		</li>
 		<li>
-			<div class="icon"><icon name="mobile"></icon></div>
+			<div class="icon"><fa-icon name="mobile"></fa-icon></div>
 			<p><b class="alert-link alert-danger">со счёта мобильного телефона</b>(взимается комиссия за перевод)</p>
 		</li>
 	</ul>

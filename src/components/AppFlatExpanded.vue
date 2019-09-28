@@ -13,7 +13,7 @@
 			  				<div id="loading-map" class="flex center"><div>Карта загружается...<fa-icon name="spinner" spin></fa-icon></div></div>
 						  	<yandex-map 
 							  :coords="this.flat.coords.split(', ')"
-							  zoom="12"
+							  zoom="13"
 							  style="width: 100%; height: 100%;"
 							  :cluster-options="{
 							    1: {clusterDisableClickZoom: true}
@@ -95,7 +95,7 @@
 			        }, // define options here
 			        // clusterName: "1",
 			        // balloonTemplate: '<div>"Your custom template"</div>',
-			        callbacks: { click: function() {} }
+			        callbacks: {}
 			      }
 		    	]
 	      	}

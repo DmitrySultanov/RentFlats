@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
+import babelPolyfill from 'babel-polyfill'
 import { router } from './router'
 import { routes } from './routes'
 import { sync } from 'vuex-router-sync'
