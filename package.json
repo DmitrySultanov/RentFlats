@@ -17,6 +17,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "lodash.update": "^4.10.2",
     "mongoose": "^5.2.17",
     "morgan": "^1.9.1",
     "v-selectmenu": "^1.0.2",
