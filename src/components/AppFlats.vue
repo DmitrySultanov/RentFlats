@@ -24,7 +24,7 @@
      
     },
     created() {
-      Vue.http.get('http://localhost:8081/src/flats.json')
+      Vue.http.get('src/flats.json')
         .then(response => response.json())
         .then(flats => {
             this.flats = flats
